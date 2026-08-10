@@ -1,7 +1,15 @@
 @import "tailwindcss";
 @import "tailwindcss/preflight";
-@import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@theme {
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-primary: rgb(var(--primary));
+  --color-secondary: rgb(var(--secondary));
+  --color-accent: rgb(var(--accent));
+  --color-card: rgb(var(--card));
+}
 
 @layer base {
   :root {
