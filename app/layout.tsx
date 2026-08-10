@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Manrope, Nunito } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Manrope, Nunito, Geist } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -30,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ru" suppressHydrationWarning >
+    <html lang="ru" suppressHydrationWarning className={cn("font-sans", geist.variable)} >
       <body className={`${inter.variable} ${jakarta.variable} ${manrope.variable} ${nunito.variable}`} suppressHydrationWarning>
         <ThemeProvider>
           {children}
