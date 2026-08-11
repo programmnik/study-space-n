@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, Plus_Jakarta_Sans, Manrope, Nunito } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/components/ui/ThemeProvider'
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -34,8 +35,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jakarta.variable} ${manrope.variable} ${nunito.variable}`}>
-        {children}
+      <body className={`${inter.variable} ${jakarta.variable} ${manrope.variable} ${nunito.variable}`} suppressHydrationWarning>
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
