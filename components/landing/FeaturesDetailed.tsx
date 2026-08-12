@@ -111,9 +111,6 @@ export function FeaturesDetailed() {
 
             {/* Контент */}
             <div className="container relative mx-auto px-4 max-w-2xl z-10">
-                <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-                    Как это работает
-                </h2>
 
                 <div className="relative">
                     {/* Вертикальная линия времени */}

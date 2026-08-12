@@ -1,3 +1,4 @@
+import { FAQ } from "@/components/landing/FAQ";
 import { Features } from "@/components/landing/Features";
 import { FeaturesDetailed } from "@/components/landing/FeaturesDetailed";
 import { Hero } from "@/components/landing/Hero";
@@ -15,8 +16,9 @@ export default function Home() {
       </Container>
 
       <Slider />
-
       <FeaturesDetailed />
+      <FAQ />
+
     </main>
   </>
 }
