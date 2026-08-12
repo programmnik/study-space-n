@@ -1,6 +1,7 @@
 import { FAQ } from "@/components/landing/FAQ";
 import { Features } from "@/components/landing/Features";
 import { FeaturesDetailed } from "@/components/landing/FeaturesDetailed";
+import { Footer } from "@/components/landing/Footer";
 import { Hero } from "@/components/landing/Hero";
 import { Slider } from "@/components/landing/Slider";
 import { Container } from "@/components/shared/Container";
@@ -18,6 +19,7 @@ export default function Home() {
       <Slider />
       <FeaturesDetailed />
       <FAQ />
+      <Footer />
 
     </main>
   </>

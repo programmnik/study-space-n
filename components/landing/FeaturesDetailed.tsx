@@ -42,7 +42,7 @@ export function FeaturesDetailed() {
     ];
 
     return (
-        <section className="relative py-24 overflow-hidden">
+        <section className="relative py-24">
             {/* Фон с сеткой */}
             <div className="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-purple-50/30 to-pink-50/50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20">
                 {/* Сетка как в Prism */}
@@ -64,10 +64,10 @@ export function FeaturesDetailed() {
                     <rect width="100%" height="100%" fill="url(#dots)" />
                 </svg>
 
-                {/* Пульсирующие градиенты */}
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-400/10 rounded-full blur-3xl animate-pulse delay-2000" />
+                {/* Пульсирующие градиенты - теперь они выходят за пределы */}
+                <div className="absolute -top-28 left-64 w-[600px] h-[600px] bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
+                <div className="absolute -bottom-20 -right-0 w-[600px] h-[600px] bg-purple-400/20 rounded-full blur-3xl animate-pulse delay-1000" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-pink-400/10 rounded-full blur-3xl animate-pulse delay-2000" />
             </div>
 
             {/* Декоративные SVG по бокам */}
@@ -111,7 +111,6 @@ export function FeaturesDetailed() {
 
             {/* Контент */}
             <div className="container relative mx-auto px-4 max-w-2xl z-10">
-
                 <div className="relative">
                     {/* Вертикальная линия времени */}
                     <div className="absolute left-[27px] top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 via-purple-400 to-pink-400 opacity-30" />

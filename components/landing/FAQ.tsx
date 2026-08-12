@@ -4,6 +4,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from '@/components/ui/accordion'
+import { ChevronDown } from 'lucide-react'
 
 const faqs = [
     {
@@ -30,22 +31,28 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="py-20">
-            <div className="container mx-auto px-4 max-w-3xl">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <section className="relative py-24 bg-gradient-to-b from-pink-50/50 via-purple-50/30 to-white dark:from-pink-950/20 dark:via-purple-950/20 dark:to-slate-900">
+            <div className="container relative mx-auto px-4 max-w-3xl">
+                <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900 dark:text-white">
                     Частые вопросы
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400 text-center mb-12">
+                <p className="text-gray-600 dark:text-gray-400 text-center text-lg mb-16">
                     Всё, что вы хотели знать о Study Space N
                 </p>
 
-                <Accordion className="w-full">
+                <Accordion className="w-full space-y-3">
                     {faqs.map((faq, idx) => (
-                        <AccordionItem key={idx} value={`item-${idx}`}>
-                            <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                                {faq.question}
+                        <AccordionItem
+                            key={idx}
+                            value={`item-${idx}`}
+                            className="border-0 bg-white/50 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl px-6 transition-all hover:bg-white/70 dark:hover:bg-gray-800/50"
+                        >
+                            <AccordionTrigger className="text-left py-5 hover:no-underline [&[data-state=open]>svg]:rotate-180">
+                                <span className="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-200">
+                                    {faq.question}
+                                </span>
                             </AccordionTrigger>
-                            <AccordionContent className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            <AccordionContent className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed pb-5">
                                 {faq.answer}
                             </AccordionContent>
                         </AccordionItem>
