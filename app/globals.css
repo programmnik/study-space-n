@@ -4,6 +4,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-custom-background: rgb(255, 255, 255);
+  --color-custom-foreground: rgb(15, 23, 42);
+  --color-custom-primary: rgb(59, 130, 246);
+  --color-custom-secondary: rgb(100, 116, 139);
+  --color-custom-accent: rgb(99, 102, 241);
+  --color-custom-card: rgb(255, 255, 255);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -81,6 +90,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --custom-background: 255, 255, 255;
+  --custom-foreground: 15, 23, 42;
+  --custom-primary: 59, 130, 246;
+  --custom-secondary: 100, 116, 139;
+  --custom-accent: 99, 102, 241;
+  --custom-card: 255, 255, 255;
 }
 
 .dark {
@@ -115,15 +131,24 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --custom-background: 15, 23, 42;
+  --custom-foreground: 241, 245, 249;
+  --custom-primary: 96, 165, 250;
+  --custom-secondary: 148, 163, 184;
+  --custom-accent: 129, 140, 248;
+  --custom-card: 30, 41, 59;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
