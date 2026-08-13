@@ -24,15 +24,17 @@ export function Hero() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="2xl" className="group relative">
-                        <Link href="/register" className="flex gap-2">
+                    <Link href="/register" className="flex gap-2">
+                        <Button size="2xl" className="group relative">
                             <p className='flex items-center gap-1 transition duration-300 group-hover:opacity-0'>Начать</p>
                             <ArrowRight size={20} className="absolute top-1/2 right-9 transition duration-300 -translate-x-7 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0" />
-                        </Link>
-                    </Button>
-                    <Button size="2xl" variant="outline">
-                        <Link href="/login">Войти</Link>
-                    </Button>
+                        </Button>
+                    </Link>
+                    <Link href="/login">
+                        <Button size="2xl" variant="outline">
+                            Войти
+                        </Button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 mt-12 max-w-xl mx-auto">
